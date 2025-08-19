@@ -51,7 +51,7 @@ export default function Home() {
                 className="h-40 w-40 object-cover mx-auto rounded-xl"
               />
               <h3 className="text-lg font-bold mt-4">{product.title}</h3>
-              <p className="text-pink-600 font-semibold mt-2">
+              <p className="text-indigo-600 font-semibold mt-2">
                 ${product.price}
               </p>
             </div>
