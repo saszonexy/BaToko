@@ -30,7 +30,7 @@ export default function Contact() {
         ></textarea>
         <button
           type="submit"
-          className="bg-pink-500 text-white px-6 py-3 rounded-xl w-full"
+          className="bg-indigo-500 text-white px-6 py-3 rounded-xl w-full"
         >
           Kirim
         </button>

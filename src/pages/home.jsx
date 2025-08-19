@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       {}
-      <section className="bg-gradient-to-r from-pink-400 to-pink-600 text-center text-white py-20">
+      <section className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-center text-white py-20">
         <h1 className="text-5xl font-extrabold mb-4">Batoko</h1>
         <p className="text-lg">
           Dapatkan Outfit terbaik anda disini ✨

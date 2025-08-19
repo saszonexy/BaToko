@@ -13,8 +13,8 @@ export default function Register() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-white-400 to-pink-600">
-      <div className="bg-pink-100 shadow-lg rounded-2xl p-10 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-pink-600 mb-6">
+      <div className="bg-indigo-300 shadow-xl rounded-2xl p-10 w-full max-w-md">
+        <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
           Register
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -44,14 +44,14 @@ export default function Register() {
           />
           <button
             type="submit"
-            className="w-full bg-pink-500 text-white py-3 rounded-lg font-semibold hover:bg-pink-600 transition"
+            className="w-full bg-indigo-500 text-white py-3 rounded-lg font-semibold hover:bg-indigo-600 transition"
           >
             Daftar
           </button>
         </form>
         <p className="mt-4 text-center text-gray-600">
           Sudah punya akun?{" "}
-          <a href="/login" className="text-pink-600 font-bold">
+          <a href="/login" className="text-indigo-600 font-bold">
             Login
           </a>
         </p>

@@ -26,7 +26,7 @@ export default function Product() {
               className="h-40 w-40 object-contain mx-auto"
             />
             <h3 className="text-lg font-bold mt-4">{p.title}</h3>
-            <p className="text-pink-600 font-semibold">${p.price}</p>
+            <p className="text-indigo-600 font-semibold">${p.price}</p>
           </div>
         ))}
       </div>
