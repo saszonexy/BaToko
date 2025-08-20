@@ -13,7 +13,7 @@ export default function Cart() {
         </p>
         <Link
           to="/product"
-          className="bg-pink-500 text-white px-5 py-2 rounded-lg hover:bg-pink-600 transition"
+          className="bg-indigo-500 text-white px-5 py-2 rounded-lg hover:bg-indigo-600 transition"
         >
           Go Shopping
         </Link>
@@ -44,7 +44,7 @@ export default function Cart() {
               />
               <div className="ml-4 flex-1">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
-                <p className="text-pink-600 font-semibold">${item.price}</p>
+                <p className="text-indigo-600 font-semibold">${item.price}</p>
                 <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
               </div>
               <button
@@ -65,7 +65,7 @@ export default function Cart() {
           </p>
           <p className="flex justify-between text-lg mb-4">
             <span>Total Price:</span>{" "}
-            <span className="font-semibold text-pink-600">
+            <span className="font-semibold text-indigo-600">
               ${total.toFixed(2)}
             </span>
           </p>
@@ -75,7 +75,7 @@ export default function Cart() {
           >
             Clear Cart
           </button>
-          <button className="w-full bg-pink-500 text-white py-3 rounded-lg font-semibold hover:bg-pink-600 transition">
+          <button className="w-full bg-indigo-500 text-white py-3 rounded-lg font-semibold hover:bg-indigo-600 transition">
             Checkout
           </button>
         </div>
