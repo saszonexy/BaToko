@@ -14,10 +14,8 @@ export default function Home() {
     <div>
       {}
       <section className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-center text-white py-20">
-        <h1 className="text-5xl font-extrabold mb-4">Batoko</h1>
-        <p className="text-lg">
-          Dapatkan Outfit terbaik anda disini ✨
-        </p>
+        <h1 className="text-5xl font-extrabold mb-4">BaToko</h1>
+        <p className="text-lg">Dapatkan Outfit terbaik anda disini ✨</p>
       </section>
 
       {}
@@ -59,10 +57,11 @@ export default function Home() {
         </div>
       </section>
 
-        { }
+      {}
       <section className="p-10 text-center max-w-2xl mx-auto">
         <p className="text-lg text-gray-700">
-          BaToko menyediakan banyak pilihan pakaian menarik, untuk anda dan keluarga. Mari belanja hemat di BaToko, Toko pilihan keluarga.
+          BaToko menyediakan banyak pilihan pakaian menarik, untuk anda dan
+          keluarga. Mari belanja hemat di BaToko, Toko pilihan keluarga.
         </p>
       </section>
     </div>
