@@ -8,34 +8,36 @@ import Contact from "./pages/contact";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Cart from "./pages/Cart";
+import PromoPage from "./pages/promopage";
 import { AuthProvider } from "./Context/AuthContext";
 import { CartProvider } from "./Context/CartContext";
+import { PromoProvider } from "./Context/PromoContext"; 
 
 export default function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Router>
-      
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-
-          
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/product" element={<Product />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/cart" element={<Cart />} />
-              </Routes>
-            </main>
-
-            <Footer />
-          </div>
-        </Router>
+        <PromoProvider>
+          {" "}
+          <Router>
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/product" element={<Product />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/promo" element={<PromoPage />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          </Router>
+        </PromoProvider>
       </CartProvider>
     </AuthProvider>
   );

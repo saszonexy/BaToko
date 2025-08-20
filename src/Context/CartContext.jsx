@@ -5,7 +5,7 @@ const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-  const { user } = useAuth(); // cek user dari AuthContext
+  const { user } = useAuth();
 
   const addToCart = (product) => {
     if (!user) {
@@ -13,7 +13,6 @@ export function CartProvider({ children }) {
       return;
     }
 
-    // kalau sudah ada produk yang sama → tambahkan quantity
     setCart((prevCart) => {
       const exist = prevCart.find((item) => item.id === product.id);
       if (exist) {
@@ -23,6 +22,13 @@ export function CartProvider({ children }) {
       }
       return [...prevCart, { ...product, qty: 1 }];
     });
+  };
+
+  const updateQuantity = (id, qty) => {
+    if (qty < 1) return;
+    setCart((prevCart) =>
+      prevCart.map((item) => (item.id === id ? { ...item, qty } : item))
+    );
   };
 
   const removeFromCart = (id) => {
@@ -35,7 +41,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
+      value={{ cart, addToCart, updateQuantity, removeFromCart, clearCart }}
     >
       {children}
     </CartContext.Provider>
