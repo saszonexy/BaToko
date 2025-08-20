@@ -26,11 +26,11 @@ export default function Product() {
               className="mx-auto h-40 object-contain rounded-lg"
             />
             <h3 className="text-xl font-bold mt-4">{p.title}</h3>
-            <p className="text-pink-600 font-semibold">${p.price}</p>
+            <p className="text-indigo-600 font-semibold">${p.price}</p>
 
             <Link
               to={`/product/${p.id}`}  
-              className="mt-4 inline-block bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition"
+              className="mt-4 inline-block bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition"
             >
               See Detail
             </Link>

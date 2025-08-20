@@ -1,18 +1,22 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../Context/AuthContext";
 
 export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { register } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Register dengan:", { name, email, password });
+    register(name, email, password); 
+    navigate("/"); 
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-white-400 to-pink-600">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-white-400 to-indigo-600">
       <div className="bg-indigo-300 shadow-xl rounded-2xl p-10 w-full max-w-md">
         <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
           Register
