@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nestjs/cli": "^11.0.10",
+    "axios": "^1.11.0",
     "init": "^0.1.2",
     "lucide-react": "^0.540.0",
     "react": "^19.1.1",

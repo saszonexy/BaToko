@@ -11,14 +11,14 @@ import Cart from "./pages/Cart";
 import PromoPage from "./pages/promopage";
 import { AuthProvider } from "./Context/AuthContext";
 import { CartProvider } from "./Context/CartContext";
-import { PromoProvider } from "./Context/PromoContext"; 
+import { PromoProvider } from "./Context/PromoContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <PromoProvider>
-          {" "}
           <Router>
             <div className="flex flex-col min-h-screen">
               <Navbar />
@@ -30,8 +30,23 @@ export default function App() {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
-                  <Route path="/cart" element={<Cart />} />
-                  <Route path="/promo" element={<PromoPage />} />
+
+                  <Route
+                    path="/cart"
+                    element={
+                      <ProtectedRoute>
+                        <Cart />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/promo"
+                    element={
+                      <ProtectedRoute>
+                        <PromoPage />
+                      </ProtectedRoute>
+                    }
+                  />
                 </Routes>
               </main>
               <Footer />
